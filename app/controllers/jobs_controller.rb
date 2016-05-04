@@ -11,7 +11,7 @@ class JobsController < ApplicationController
     @job = Job.new(job_params)
 
     if @job.save
-      redirect_to :root_path, notice: "Job successfully added."
+      redirect_to :root, notice: "Job successfully added."
     else
       render :new
     end
@@ -38,7 +38,7 @@ class JobsController < ApplicationController
   def destroy
     @job = Job.find_by_id(params["id"])
     @job.destroy
-    redirect_to :jobs, notice: "Job successfully destroyed."
+    redirect_to :root, notice: "Job successfully destroyed."
   end
 
   private
