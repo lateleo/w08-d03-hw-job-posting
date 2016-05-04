@@ -1,45 +1,8 @@
-<h1>Edit Job Posting</h1>
+<h1>Edit Job Listing</h1>
 
-<%= form_for @job do |f| %>
-  <div>
-    <%= f.label :company_name %></br>
-    <%= f.text_field :company_name %>
-  </div>
-  <div>
-    <%= f.label :job_title %></br>
-    <%= f.text_field :job_title %>
-  </div>
-  <div>
-    <%= f.label :location %></br>
-    <%= f.text_field :location %>
-  </div>
-  <div>
-    <%= f.label :salary_range %></br>
-    <%= f.text_field :salary_range %>
-  </div>
-  <div>
-    <%= f.label :description %></br>
-    <%= f.text_area :description %>
-  </div>
-  <div>
-    <%= f.label :benefits %></br>
-    <%= f.text_area :benefits %>
-  </div>
-  <div>
-    <%= f.label :requirements %></br>
-    <%= f.text_area :requirements %>
-  </div>
-  <div>
-    <%= f.label :to_apply %></br>
-    <%= f.text_field :to_apply %>
-  </div>
-  <div>
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= render 'form' %>
 
-</br>
-</br>
-<%= link_to 'Destroy',  job_path(@job),  method: :delete, data: { confirm: 'Are you sure?' } %>
-</br>
-<%= link_to "Back to All Job Postings", root_path %>
+
+<%= link_to 'Destroy', job_path(@job), method: :delete, data: { confirm: 'Are you sure?' } %>
+-
+<%= link_to "Back to Job Listing", job_path(@job) %>

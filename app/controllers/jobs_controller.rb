@@ -29,7 +29,7 @@ class JobsController < ApplicationController
     @job = Job.find_by_id(params["id"])
 
     if @job.update_attributes(job_params)
-      redirect_to :show, notice: "Job successfully updated."
+      redirect_to @job, notice: "Job successfully updated."
     else
       render :edit
     end
