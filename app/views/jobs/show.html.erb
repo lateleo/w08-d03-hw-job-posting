@@ -1,2 +1,20 @@
-<h1>Job#show</h1>
-<p>Find me in app/views/job/show.html.erb</p>
+<h1><%= @job.company_name %> - <%= @job.job_title %> - <%= @job.location %></h1>
+
+<span><h4>Salary :</h4><%= @job.salary_range %></span>
+
+<h4>Description: </h4>
+<p><%= @job.description %></p>
+
+<h4>Benefits:</h4>
+<p><%= @job.benefits %></p>
+
+<h4>Requirements:</h4>
+<p><%= @job.requirements %></p>
+
+<h4>To Apply:</h4>
+<p><%= @job.to_apply %></p>
+
+</br>
+<%=link_to "Edit This Job Postings", edit_job_path%>
+</br>
+<%=link_to "Back to Job Postings", root_path%>
